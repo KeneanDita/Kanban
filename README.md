@@ -2,8 +2,6 @@
 
 A **fun, playful, production-ready** Kanban app with real-time collaboration, built with Go, GraphQL, Next.js, and PostgreSQL.
 
----
-
 ## Features
 
 - **Kanban Board** — Drag-and-drop tasks across columns (Todo, In Progress, Done)
@@ -15,8 +13,6 @@ A **fun, playful, production-ready** Kanban app with real-time collaboration, bu
 - **Activity Log** — Per-task activity history
 - **Search & Filter** — Filter by priority, search by title/description
 - **Responsive UI** — Works beautifully on all screen sizes
-
----
 
 ## Tech Stack
 
@@ -33,8 +29,6 @@ A **fun, playful, production-ready** Kanban app with real-time collaboration, bu
 | Animations   | Framer Motion                       |
 | State        | Zustand (persisted)                 |
 | HTTP Client  | `graphql-request`                   |
-
----
 
 ## Quick Start
 
@@ -68,8 +62,6 @@ createdb kanban
 psql -U postgres -d kanban -f backend/migrations/001_init.sql
 ```
 
----
-
 ### 3. Backend
 
 ```bash
@@ -83,8 +75,6 @@ Backend runs on **http://localhost:8080**
 
 GraphQL playground: **http://localhost:8080/graphql**
 
----
-
 ### 4. Frontend
 
 ```bash
@@ -96,8 +86,6 @@ npm run dev
 
 Frontend runs on **http://localhost:3000**
 
----
-
 ### 5. Docker (Full Stack)
 
 ```bash
@@ -108,8 +96,6 @@ All services start together:
 - Frontend: http://localhost:3000
 - Backend: http://localhost:8080
 - PostgreSQL: localhost:5432
-
----
 
 ## Environment Variables
 
@@ -132,8 +118,6 @@ JWT_SECRET=your-super-secret-jwt-key-change-in-production
 NEXT_PUBLIC_API_URL=http://localhost:8080/graphql
 NEXT_PUBLIC_WS_URL=ws://localhost:8080/ws
 ```
-
----
 
 ## Project Structure
 
@@ -176,8 +160,6 @@ Kanban/
 └── README.md
 ```
 
----
-
 ## GraphQL API Examples
 
 ### Register
@@ -214,8 +196,6 @@ mutation {
 }
 ```
 
----
-
 ## Real-time WebSocket Events
 
 Connect to `ws://localhost:8080/ws?teamId=<your-team-id>` with a Bearer token header.
@@ -228,8 +208,6 @@ Connect to `ws://localhost:8080/ws?teamId=<your-team-id>` with a Bearer token he
 | `task_deleted`  | Task deleted                      |
 | `notification`  | Task assigned to a specific user  |
 
----
-
 ## Design System
 
 - **Font**: Sora (Google Fonts)
@@ -237,8 +215,6 @@ Connect to `ws://localhost:8080/ws?teamId=<your-team-id>` with a Bearer token he
 - **Components**: Rounded cards, bubble buttons, soft shadows
 - **Animations**: Framer Motion — bounce, slide, fade, drag
 - **Dark mode**: Full dark theme with cartoonish charm
-
----
 
 ## License
 
