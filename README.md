@@ -44,16 +44,12 @@ A **fun, playful, production-ready** Kanban app with real-time collaboration, bu
 - [Node.js 20+](https://nodejs.org/)
 - [PostgreSQL 16+](https://www.postgresql.org/) (or Docker)
 
----
-
 ### 1. Clone & Setup
 
 ```bash
 git clone https://github.com/KeneanDita/Kanban.git
 cd Kanban
 ```
-
----
 
 ### 2. Database Setup
 
