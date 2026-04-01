@@ -1,12 +1,12 @@
-# 🎯 KanFlow — Real-time Collaborative Kanban
+# KanFlow — Real-time Collaborative Kanban
 
 A **fun, playful, production-ready** Kanban app with real-time collaboration, built with Go, GraphQL, Next.js, and PostgreSQL.
 
 ---
 
-## ✨ Features
+## Features
 
-- **Kanban Board** — Drag-and-drop tasks across columns (Todo → In Progress → Done)
+- **Kanban Board** — Drag-and-drop tasks across columns (Todo, In Progress, Done)
 - **Real-time Sync** — WebSockets broadcast changes to all connected team members instantly
 - **Teams & Roles** — Admin and Member roles with team management UI
 - **JWT Auth** — Secure login/register with bcrypt password hashing
@@ -18,7 +18,7 @@ A **fun, playful, production-ready** Kanban app with real-time collaboration, bu
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 | Layer        | Technology                          |
 |--------------|-------------------------------------|
@@ -36,7 +36,7 @@ A **fun, playful, production-ready** Kanban app with real-time collaboration, bu
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -49,7 +49,7 @@ A **fun, playful, production-ready** Kanban app with real-time collaboration, bu
 ### 1. Clone & Setup
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/KeneanDita/Kanban.git
 cd Kanban
 ```
 
@@ -115,7 +115,7 @@ All services start together:
 
 ---
 
-## 🔧 Environment Variables
+## Environment Variables
 
 ### Backend (`backend/.env`)
 
@@ -139,7 +139,7 @@ NEXT_PUBLIC_WS_URL=ws://localhost:8080/ws
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Kanban/
@@ -182,7 +182,7 @@ Kanban/
 
 ---
 
-## 🎨 GraphQL API Examples
+## GraphQL API Examples
 
 ### Register
 ```graphql
@@ -220,7 +220,7 @@ mutation {
 
 ---
 
-## ⚡ Real-time WebSocket Events
+## Real-time WebSocket Events
 
 Connect to `ws://localhost:8080/ws?teamId=<your-team-id>` with a Bearer token header.
 
@@ -234,7 +234,7 @@ Connect to `ws://localhost:8080/ws?teamId=<your-team-id>` with a Bearer token he
 
 ---
 
-## 🎭 Design System
+## Design System
 
 - **Font**: Sora (Google Fonts)
 - **Palette**: Soft pastels + vibrant accents
@@ -244,6 +244,6 @@ Connect to `ws://localhost:8080/ws?teamId=<your-team-id>` with a Bearer token he
 
 ---
 
-## 📝 License
+## License
 
 MIT
