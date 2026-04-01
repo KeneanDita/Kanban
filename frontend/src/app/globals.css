@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 250 255;
+    --foreground: 30 30 60;
+  }
+  .dark {
+    --background: 18 18 32;
+    --foreground: 230 230 255;
+  }
+  body {
+    @apply font-sans antialiased;
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+  }
+}
+
+@layer components {
+  .btn-bubble {
+    @apply relative inline-flex items-center justify-center gap-2 font-semibold rounded-2xl
+           px-5 py-2.5 text-sm transition-all duration-150
+           shadow-bubble active:shadow-bubble-hover active:translate-y-0.5
+           hover:scale-105 active:scale-95 cursor-pointer select-none;
+  }
+
+  .btn-primary {
+    @apply btn-bubble bg-brand-purple text-white hover:bg-violet-500;
+  }
+
+  .btn-secondary {
+    @apply btn-bubble bg-white text-gray-700 border-2 border-gray-200 hover:border-brand-purple hover:text-brand-purple;
+  }
+
+  .btn-danger {
+    @apply btn-bubble bg-brand-red text-white hover:bg-red-500;
+  }
+
+  .btn-success {
+    @apply btn-bubble bg-brand-green text-white hover:bg-emerald-400;
+  }
+
+  .card {
+    @apply bg-white dark:bg-slate-800 rounded-3xl shadow-card p-5
+           transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border-2 border-gray-200 dark:border-slate-600
+           bg-white dark:bg-slate-700 text-gray-800 dark:text-gray-100
+           px-4 py-3 text-sm font-medium
+           focus:outline-none focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20
+           transition-all duration-150 placeholder:text-gray-400;
+  }
+
+  .label {
+    @apply block text-sm font-semibold text-gray-600 dark:text-gray-300 mb-1.5;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-low    { @apply badge bg-pastel-green text-emerald-700; }
+  .badge-medium { @apply badge bg-pastel-yellow text-amber-700; }
+  .badge-high   { @apply badge bg-pastel-pink text-pink-700; }
+
+  .skeleton {
+    @apply animate-pulse bg-gray-200 dark:bg-slate-700 rounded-2xl;
+  }
+
+  .section-header {
+    @apply relative overflow-hidden rounded-3xl px-8 py-6 mb-6;
+  }
+
+  .blob {
+    @apply absolute rounded-full opacity-30 blur-3xl pointer-events-none;
+  }
+
+  .kanban-column {
+    @apply flex flex-col rounded-3xl p-4 min-h-[500px] w-[320px] flex-shrink-0;
+  }
+
+  .task-card {
+    @apply bg-white dark:bg-slate-800 rounded-2xl p-4 shadow-card
+           border-2 border-transparent hover:border-brand-purple/30
+           cursor-grab active:cursor-grabbing select-none
+           transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  .task-card-dragging {
+    @apply shadow-xl rotate-2 scale-105 border-brand-purple/50 opacity-90;
+  }
+
+  .notification-dot {
+    @apply absolute -top-1 -right-1 w-4 h-4 rounded-full bg-brand-red
+           flex items-center justify-center text-white text-[9px] font-bold;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* Custom scrollbar for columns */
+.kanban-scroll::-webkit-scrollbar { width: 4px; }
+.kanban-scroll::-webkit-scrollbar-track { background: transparent; }
+.kanban-scroll::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.4);
+  border-radius: 4px;
+}
+
+/* Drag overlay */
+[data-dnd-overlay] {
+  pointer-events: none;
+}
